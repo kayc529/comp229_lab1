@@ -15,11 +15,15 @@ function sum(...args) {
 var myArray = [4, 5, 1, 2];
 
 function sumX(a, b, ...args) {
-  let sum = 0;
+  let numSum = 0;
   let product = a * b;
   for (const arg of args) {
-    sum += arg;
+    console.log(arg);
+    numSum += arg;
   }
 
-  return [product, sum];
+  return [product, numSum];
 }
+
+console.log(sum(myArray));
+console.log(sumX(2, 5, myArray));
